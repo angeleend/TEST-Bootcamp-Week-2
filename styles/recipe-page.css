@@ -1,0 +1,63 @@
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lancelot-regular {
+    font-family: "Lancelot", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(155, 39, 39);
+}
+
+.inner-bg {
+    padding: 2rem 8rem;
+    background-color: rgb(232, 229, 219);
+    width: 100%;
+}
+
+h1 {
+    font-family: "Monsieur La Doulaise", cursive;
+    color: rgb(155, 39, 39);
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+h2, h3, h4, ul, ol {
+    font-family: "Lancelot", serif;
+    color: rgb(54, 54, 54);
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+ul, ol {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
