@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/recipe-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <title>Cookies and Cream Brownies</title>
+</head>
+<body>
+    <header>
+        <nav id="side-nav">
+            <button id="nav-toggle">||</button>
+            <a href="home.html">Home</a>
+            <a href="list.html">Recipes</a>
+        </nav>
+    </header>
+
+    <main>
+       <div class="form-container">
+            <h1>New Recipe</h1>
+            <h2>Add your favorite recipe below!</h2>
+            <form id="recipe-form">
+                <label for="name">Recipe Name:</label>
+                <input type="text" id="name" name="name" placeholder="Recipe Name" required>
+                
+                <label for="description">Recipe Name:</label>
+                <textarea id="description" name="description" placeholder="Short recipe description" required></textarea>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" placeholder="One ingredient per line" required></textarea>
+                
+                <label for="directions">Directions:</label>
+                <textarea id="directions" name="directions" placeholder="Separate each step by line" required></textarea>
+                
+                <button type="submit" id="submit-btn">Create Page</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    </body>
+</html>

@@ -10,54 +10,199 @@
     font-style: normal;
 }
 
-body {
-    display: flex;
-    margin: 2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(155, 39, 39);
+:root {
+  --cream:  rgb(232, 229, 219);
+  --red: rgb(143, 36, 36);
+  --black: #070707;
 }
 
-.inner-bg {
-    padding: 2rem 8rem;
-    background-color: rgb(232, 229, 219);
-    width: 100%;
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: var(--cream);
+  border: solid 2rem var(--red);
+  height: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/textured-paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
-    font-family: "Monsieur La Doulaise", cursive;
-    color: rgb(155, 39, 39);
-    font-size: 4rem;
-    margin-bottom: 0;
+  font-family: "Monsieur La Doulaise", cursive;
+  color: var(--red);
+  font-size: 4rem;
+  margin-bottom: 0;
 }
 
-h2, h3, h4, ul, ol {
-    font-family: "Lancelot", serif;
-    color: rgb(54, 54, 54);
+h2, h3, h4, ul, ol, label, textarea, input {
+  font-family: "Lancelot", serif;
+  color: var(--black);
 }
 
 h2 {
-    margin-top: 0.5rem;
-    font-size: 2rem;
-    font-weight: normal;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 h3 {
-    font-size: 2rem;
-    text-decoration: underline;
+  font-size: 2rem;
+  text-decoration: underline;
 }
 
 h4 {
-    font-size: 1.75rem;
-    margin-bottom: 0;
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-family: "Monsieur La Doulaise", cursive;
+  color: var(--red);
+  font-weight: bold;
+  text-align: center;
 }
 
 ul, ol {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 li {
-    margin: 0.5rem 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0.5rem 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8%;
+  background-color: var(--red);
+  z-index: 10;
+
+  & a {
+    font-family: "Lancelot", serif;
+    font-size: 1.25rem;
+    color:var(--cream);
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
+nav.closed {
+  transform: translateX(-100%);
+}
+
+nav.closed button {
+  transform: rotate(180deg);
+  position: absolute;
+  right: -2.5rem;
+  background: var(--red);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--cream);
+  margin-right: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+main {
+  margin: 4rem 10rem;
+  margin-left: calc(10rem + 8%);
+}
+
+main.shifted {
+  margin: 4rem 10rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    font-size: 1.6rem;
+  }
+
+  & input, textarea {
+    width: 100%;
+    margin: 0.25rem 0 1rem 0;
+    font-size: 1.4rem;
+    border: 1px solid var(--black);
+    background-color: #dcd8ca;
+  }
+
+  & input {
+    height: 1.5rem;
+  }
+
+  & textarea {
+    height: 10rem;
+  }
+
+  & #submit-btn {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 3rem;
+    background-color: var(--red);
+    border: 1px solid var(--black);
+    color: var(--cream);
+    font-family: "Lancelot";
+    font-size: 1.75rem;
+  }
+}
+
+#recipe-template {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+
+#error-container {
+  box-sizing: border-box;
+  text-align: center;
+
+  & h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: var(--black);
+  }
+
+  & #error-link {
+    font-family: "Lancelot", serif;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-decoration: underline;
+
+      &:hover {
+        color: var(--red);
+      }
+  }
 }

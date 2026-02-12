@@ -10,35 +10,108 @@
   font-style: normal;
 }
 
-body {
-  display: flex;
-  margin: 2rem;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(155, 39, 39);
-  text-align: center;
-  height: 100vh;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.inner-bg {
+:root {
+  --cream: rgb(232, 229, 219);
+  --red: rgb(143, 36, 36);
+  --black: #070707;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+  border: solid 2rem var(--red);
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/textured-paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.red-bg {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(232, 229, 219);
-  width: 100%;
-  height: 100%;
+  justify-content: space-around;
+  background-color: var(--red);
+  padding: 2rem;
+  border: 0.4rem dashed var(--cream);
+  width: 35rem;
+  height: 20rem;
 }
 
 h1 {
   font-family: "Monsieur La Doulaise", cursive;
-  color: rgb(155, 39, 39);
-  font-size: 4rem;
-  margin-bottom: 0;
+  color:var(--cream);
+  width: 100%;
+  font-size: 6rem;
+  margin: 0;
 }
 
 p {
   font-family: "Lancelot", serif;
-  color: rgb(54, 54, 54);
+  color:var(--cream);
   font-size: 2rem;
+}
+
+header {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 8%;
+  background-color: var(--red);
+  z-index: 10;
+}
+
+nav.closed {
+  transform: translateX(-100%);
+}
+
+nav.closed button {
+  transform: rotate(180deg);
+  position: absolute;
+  right: -2.5rem;
+  background: var(--red);
+}
+
+a {
+  font-family: "Lancelot", serif;
+  font-size: 1.25rem;
+  color:var(--cream);
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--cream);
+  margin-right: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+main {
+  margin: 4rem 10rem;
+  margin-left: calc(10rem + 8%);
+}
+
+main.shifted {
+  margin: 4rem 10rem;
 }

@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="styles/home-page.css">
+    <link rel="stylesheet" href="styles/recipe-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>New Recipe</title>
 </head>
-
 <body>
     <header>
         <nav id="side-nav">
-            <button id="nav-toggle">
-                ||
-            </button>
+            <button id="nav-toggle">||</button>
             <a href="home.html">Home</a>
             <a href="list.html">Recipes</a>
         </nav>
     </header>
-    <main>
-        <div class="red-bg">
-            <h1>Welcome!</h1>
-            <p>This is my collection of my favorite recipes.</p>
-        </div>
+
+    <main id="recipe-template">
+        <h1 id="recipe-name"></h1>
+
+        <h2 id="recipe-desc"></h2>
+        <h3>Ingredients</h3>
+            <ul id="new-ingredients" type="square">
+            </ul>
+
+        <h3>Directions</h3>
+            <ol id="new-directions" type="square">
+            </ol>
+
+        <p>Enjoy!</p>
     </main>
 
     <script src="scripts/main.js"></script>
-</body>
+    </body>
 </html>
