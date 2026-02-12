@@ -175,16 +175,6 @@ main.shifted {
   }
 }
 
-#recipe-template {
-  box-sizing: border-box;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  text-align: center;
-}
-
 #error-container {
   box-sizing: border-box;
   text-align: center;
